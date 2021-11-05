@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Welcome to the Minecraft Area Math calculator</h1>
+      <h2>At present this app only calculates for simple rectangular buildings</h2>
+      <h2>and only calculates the external walls.</h2>
+      <p>Please enter the dimensions of your building.</p>
+      <p>How many blocks long/deep is your building?</p>
+      <p>How many blocks wide is your building?</p>
+      <p>How many blocks high is your building?</p>
+      <p>How many floors does your building have?</p>
+      <p>How many doors does your building have?</p>
+      <p>How many windows does your building have?</p>
+      <p>How many blocks wide are your windows?</p>
+      <p>How many blocks high are your windows?</p>
     </div>
   );
 }
