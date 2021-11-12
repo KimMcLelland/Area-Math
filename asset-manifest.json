@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Area-Math/static/css/main.bd2f8023.chunk.css",
+    "main.js": "/Area-Math/static/js/main.ae92c8f7.chunk.js",
+    "main.js.map": "/Area-Math/static/js/main.ae92c8f7.chunk.js.map",
+    "runtime-main.js": "/Area-Math/static/js/runtime-main.40d0152d.js",
+    "runtime-main.js.map": "/Area-Math/static/js/runtime-main.40d0152d.js.map",
+    "static/js/2.6d48d895.chunk.js": "/Area-Math/static/js/2.6d48d895.chunk.js",
+    "static/js/2.6d48d895.chunk.js.map": "/Area-Math/static/js/2.6d48d895.chunk.js.map",
+    "static/js/3.d9f78dc5.chunk.js": "/Area-Math/static/js/3.d9f78dc5.chunk.js",
+    "static/js/3.d9f78dc5.chunk.js.map": "/Area-Math/static/js/3.d9f78dc5.chunk.js.map",
+    "index.html": "/Area-Math/index.html",
+    "static/css/main.bd2f8023.chunk.css.map": "/Area-Math/static/css/main.bd2f8023.chunk.css.map",
+    "static/js/2.6d48d895.chunk.js.LICENSE.txt": "/Area-Math/static/js/2.6d48d895.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40d0152d.js",
+    "static/js/2.6d48d895.chunk.js",
+    "static/css/main.bd2f8023.chunk.css",
+    "static/js/main.ae92c8f7.chunk.js"
+  ]
+}
