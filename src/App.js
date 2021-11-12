@@ -10,7 +10,7 @@ const App = () => {
   const [doors, setDoors] = useState(0);
   const [windows, setWindows] = useState(0);
   const [windHeight, setWindHeight] = useState(0);
-  const [windLength, setWindLength] = useState(0);
+  const [windWidth, setWindWidth] = useState(0);
 
   const ClearNumbers = () => {
     setXdimension(0);
@@ -20,7 +20,7 @@ const App = () => {
     setDoors(0);
     setWindows(0);
     setWindHeight(0);
-    setWindLength(0);
+    setWindWidth(0);
     setButtonSelect(0);
   }
 
@@ -28,7 +28,7 @@ const App = () => {
     let widthWalls = (xdimension - 1) * 2
     let lengthWalls = (zdimension - 1) * 2
     let doorSize = doors * 2
-    let windowSize = windLength * windHeight * windows
+    let windowSize = windWidth * windHeight * windows
     let floorArea = (xdimension - 2) * (zdimension - 2)
 
     return(
@@ -42,32 +42,120 @@ const App = () => {
     )
   }
 
+  const wallDimensions = () => {
+    return(
+      <div>
+        <div>
+          <p>How many blocks long/deep is your building?</p>
+          <div>
+            <p>{xdimension}</p>
+            <button onClick={() => setXdimension(xdimension-1)}>-</button>
+            <button onClick={() => setXdimension(xdimension+1)}>+</button>
+          </div>
+        </div>
+
+        <div>
+          <p>How many blocks wide is your building?</p>
+          <div>
+            <p>{zdimension}</p>
+            <button onClick={() => setZdimension(zdimension-1)}>-</button>
+            <button onClick={() => setZdimension(zdimension+1)}>+</button>
+          </div>
+        </div>
+
+        <div>
+          <p>How many blocks high is your building?</p>
+          <div>
+            <p>{ydimension}</p>
+            <button onClick={() => setYdimension(ydimension-1)}>-</button>
+            <button onClick={() => setYdimension(ydimension+1)}>+</button>
+          </div>
+        </div>
+        
+        <p>-------------------------------------------------------------------------</p>
+        <button onClick={() => setButtonSelect(0)}>Submit</button>
+      </div>
+    )
+}
+
+  const floorsAndDoors = () => {
+    return(
+      <div>
+        <div>
+          <p>How many floors does your building have?</p>
+          <div>
+            <p>{floors}</p>
+            <button onClick={() => setFloors(floors-1)}>-</button>
+            <button onClick={() => setFloors(floors+1)}>+</button>
+          </div>
+        </div>
+
+        <div>
+          <p>How many doors does your building have?</p>
+          <div>
+            <p>{doors}</p>
+            <button onClick={() => setDoors(doors-1)}>-</button>
+            <button onClick={() => setDoors(doors+1)}>+</button>
+          </div>
+        </div>
+
+        <p>-------------------------------------------------------------------------</p>
+        <button onClick={() => setButtonSelect(0)}>Submit</button>
+      </div>
+    )
+
+  }
+
+  const windowDimensions = () => {
+    return(
+      <div>
+        <div>
+          <p>How many windows does your building have?</p>
+          <div>
+            <p>{windows}</p>
+            <button onClick={() => setWindows(windows-1)}>-</button>
+            <button onClick={() => setWindows(windows+1)}>+</button>
+          </div>
+        </div>
+
+        <div>
+          <p>How many blocks wide are your windows?</p>
+          <div>
+            <p>{windWidth}</p>
+            <button onClick={() => setWindWidth(windWidth-1)}>-</button>
+            <button onClick={() => setWindWidth(windWidth+1)}>+</button>
+          </div>
+        </div>
+        
+        <div>
+          <p>How many blocks high are your windows?</p>
+          <div>
+            <p>{windHeight}</p>
+            <button onClick={() => setWindHeight(windHeight-1)}>-</button>
+            <button onClick={() => setWindHeight(windHeight+1)}>+</button>
+          </div>
+        </div>
+        
+        <p>-------------------------------------------------------------------------</p>
+        <button onClick={() => setButtonSelect(0)}>Submit</button>
+      </div>
+    )
+
+  }
+
   const UserInterface = () => {
     return (
       <div className="Interface">
         <p>walls: {xdimension} x {zdimension} x {ydimension}</p>
         <p>floors: {floors}</p>
         <p>doors: {doors}</p>
-        <p>windows: {windows} windows ({windLength} x {windHeight})</p>
-        <p>Please enter the dimensions of your building.</p>
-        <p>How many blocks long/deep is your building?</p>
-        <button onClick={() => setXdimension(xdimension+1)}>Increase amount</button>
-        <p>How many blocks wide is your building?</p>
-        <button onClick={() => setZdimension(zdimension+1)}>Increase amount</button>
-        <p>How many blocks high is your building?</p>
-        <button onClick={() => setYdimension(ydimension+1)}>Increase amount</button>
-        <p>How many floors does your building have?</p>
-        <button onClick={() => setFloors(floors+1)}>Select amount</button>
-        <p>How many doors does your building have?</p>
-        <button onClick={() => setDoors(doors+1)}>Select amount</button>
-        <p>How many windows does your building have?</p>
-        <button onClick={() => setWindows(windows+1)}>Select amount</button>
-        <p>How many blocks wide are your windows?</p>
-        <button onClick={() => setWindLength(windLength+1)}>Set window width</button>
-        <p>How many blocks high are your windows?</p>
-        <button onClick={() => setWindHeight(windHeight+1)}>Set window height</button>
+        <p>windows: {windows} windows ({windWidth} x {windHeight})</p>
+        <p>Please enter the dimensions of your building:</p>
+        <button onClick={() => setButtonSelect(1)}>Walls</button>
+        <button onClick={() => setButtonSelect(2)}>Floors and Doors</button>
+        <button onClick={() => setButtonSelect(3)}>Windows</button>
         <p>---------------------------------------------------------------</p>
-        <button onClick={() => setButtonSelect(1)}>Calculate</button>
+        <button onClick={() => setButtonSelect(4)}>Calculate</button>
       </div>
     );
   }
@@ -81,6 +169,27 @@ const App = () => {
     )
   }
     if (buttonSelect == 1) {
+      return(
+      <div>
+        {wallDimensions()}
+      </div>
+    )
+  }
+    if (buttonSelect == 2) {
+      return(
+      <div>
+        {floorsAndDoors()}
+      </div>
+    )
+  }
+    if (buttonSelect == 3) {
+      return(
+      <div>
+        {windowDimensions()}
+      </div>
+    )
+  }
+    if (buttonSelect == 4) {
       return(
         <div>
         {CalculateResult()}
