@@ -45,30 +45,36 @@ const App = () => {
   const wallDimensions = () => {
     return(
       <div>
-        <div>
+        <div className = "question">
           <p>How many blocks long/deep is your building?</p>
-          <div>
+          <div className = "numbers">
             <p>{xdimension}</p>
-            <button onClick={() => setXdimension(xdimension-1)}>-</button>
-            <button onClick={() => setXdimension(xdimension+1)}>+</button>
+            <div className = "buttons">
+              <button onClick={() => setXdimension(xdimension+1)}>+</button>
+              <button onClick={() => setXdimension(xdimension-1)}>-</button> 
+            </div>
           </div>
         </div>
 
-        <div>
+        <div className="question">
           <p>How many blocks wide is your building?</p>
-          <div>
+          <div className="numbers">
             <p>{zdimension}</p>
-            <button onClick={() => setZdimension(zdimension-1)}>-</button>
-            <button onClick={() => setZdimension(zdimension+1)}>+</button>
+            <div className="buttons">
+              <button onClick={() => setZdimension(zdimension+1)}>+</button>
+              <button onClick={() => setZdimension(zdimension-1)}>-</button>
+            </div>
           </div>
         </div>
 
-        <div>
+        <div className="question">
           <p>How many blocks high is your building?</p>
-          <div>
+          <div className="numbers">
             <p>{ydimension}</p>
-            <button onClick={() => setYdimension(ydimension-1)}>-</button>
-            <button onClick={() => setYdimension(ydimension+1)}>+</button>
+            <div className="buttons">
+              <button onClick={() => setYdimension(ydimension+1)}>+</button>
+              <button onClick={() => setYdimension(ydimension-1)}>-</button>
+            </div>
           </div>
         </div>
         
@@ -81,21 +87,25 @@ const App = () => {
   const floorsAndDoors = () => {
     return(
       <div>
-        <div>
+        <div className="question">
           <p>How many floors does your building have?</p>
-          <div>
+          <div className="numbers">
             <p>{floors}</p>
-            <button onClick={() => setFloors(floors-1)}>-</button>
-            <button onClick={() => setFloors(floors+1)}>+</button>
+            <div className = "buttons">
+              <button onClick={() => setFloors(floors+1)}>+</button>
+              <button onClick={() => setFloors(floors-1)}>-</button>
+            </div>
           </div>
         </div>
 
-        <div>
+        <div className="question">
           <p>How many doors does your building have?</p>
-          <div>
+          <div className="numbers">
             <p>{doors}</p>
-            <button onClick={() => setDoors(doors-1)}>-</button>
-            <button onClick={() => setDoors(doors+1)}>+</button>
+            <div className = "buttons">
+              <button onClick={() => setDoors(doors+1)}>+</button>
+              <button onClick={() => setDoors(doors-1)}>-</button>
+            </div>
           </div>
         </div>
 
@@ -109,30 +119,36 @@ const App = () => {
   const windowDimensions = () => {
     return(
       <div>
-        <div>
+        <div className = "question">
           <p>How many windows does your building have?</p>
-          <div>
+          <div className = "numbers">
             <p>{windows}</p>
-            <button onClick={() => setWindows(windows-1)}>-</button>
-            <button onClick={() => setWindows(windows+1)}>+</button>
+            <div className = "buttons">
+              <button onClick={() => setWindows(windows+1)}>+</button>
+              <button onClick={() => setWindows(windows-1)}>-</button>
+            </div> 
           </div>
         </div>
 
-        <div>
+        <div className = "question">
           <p>How many blocks wide are your windows?</p>
-          <div>
+          <div className = "numbers">
             <p>{windWidth}</p>
-            <button onClick={() => setWindWidth(windWidth-1)}>-</button>
-            <button onClick={() => setWindWidth(windWidth+1)}>+</button>
+            <div className="buttons">
+              <button onClick={() => setWindWidth(windWidth+1)}>+</button>
+              <button onClick={() => setWindWidth(windWidth-1)}>-</button>
+            </div>
           </div>
         </div>
         
-        <div>
+        <div className = "question">
           <p>How many blocks high are your windows?</p>
-          <div>
+          <div className = "numbers">
             <p>{windHeight}</p>
-            <button onClick={() => setWindHeight(windHeight-1)}>-</button>
+            <div className="buttons">
             <button onClick={() => setWindHeight(windHeight+1)}>+</button>
+            <button onClick={() => setWindHeight(windHeight-1)}>-</button>
+            </div> 
           </div>
         </div>
         
