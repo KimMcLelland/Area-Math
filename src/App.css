@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: lightgreen;
+  margin: 0px 50px;
 }
 
 .question {
@@ -31,4 +32,8 @@
   width: 16px;
   font-size: 15px;
   padding: 0px;
+}
+
+.page_bottom {
+  padding: 20px;
 }

@@ -36,8 +36,9 @@ const App = () => {
         <p>The amount of blocks you'll need for the external walls are: {((widthWalls + lengthWalls) * ydimension) - doorSize - windowSize}</p>
         <p>The amount of blocks you'll need for the floors are: {floorArea * floors}</p>
         <p>The amount of blocks you'll likely need for the roof are: {(xdimension + 2) * (zdimension + 2)}</p>
-        
-        <button onClick={() => ClearNumbers()}>Go Again</button>
+        <div className="page_bottom">
+          <button onClick={() => ClearNumbers()}>Go Again</button>
+        </div>
       </div>
     )
   }
@@ -79,7 +80,9 @@ const App = () => {
         </div>
         
         <p>-------------------------------------------------------------------------</p>
-        <button onClick={() => setButtonSelect(0)}>Submit</button>
+        <div className="page_bottom">
+          <button onClick={() => setButtonSelect(0)}>Submit</button>
+        </div>
       </div>
     )
 }
@@ -110,7 +113,9 @@ const App = () => {
         </div>
 
         <p>-------------------------------------------------------------------------</p>
-        <button onClick={() => setButtonSelect(0)}>Submit</button>
+        <div className="page_bottom">
+          <button onClick={() => setButtonSelect(0)}>Submit</button>
+        </div>
       </div>
     )
 
@@ -153,7 +158,9 @@ const App = () => {
         </div>
         
         <p>-------------------------------------------------------------------------</p>
-        <button onClick={() => setButtonSelect(0)}>Submit</button>
+        <div className="page_bottom">
+          <button onClick={() => setButtonSelect(0)}>Submit</button>
+        </div>
       </div>
     )
 
@@ -171,7 +178,9 @@ const App = () => {
         <button onClick={() => setButtonSelect(2)}>Floors and Doors</button>
         <button onClick={() => setButtonSelect(3)}>Windows</button>
         <p>---------------------------------------------------------------</p>
-        <button onClick={() => setButtonSelect(4)}>Calculate</button>
+        <div className="page_bottom">
+          <button onClick={() => setButtonSelect(4)}>Calculate</button>
+        </div>
       </div>
     );
   }
